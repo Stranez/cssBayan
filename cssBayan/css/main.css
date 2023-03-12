@@ -151,6 +151,11 @@ label {
 
     .acordion-elem__title img {
         width: 30px;
+        opacity: 0;
+    }
+
+    .acordion:hover .acordion-elem__title img {
+        opacity: 1;
     }
 
     .acordion-elem__title:hover img { /* при наведении */
