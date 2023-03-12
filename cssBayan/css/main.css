@@ -68,15 +68,18 @@ label {
 
 .acordion-elem__check:checked + .acordion-elem__title { /* при клике на радио инпут*/
     color: #000;
+    transition: .7s;
 }
 
 .acordion-elem__title img { /* крестик закрытия\плюсик открытия */
     width: 15px;
     transform: rotate(45deg);
+    transition: .7s;
 }
 
 .acordion-elem__check:checked + .acordion-elem__title img { /* при клике на радио инпут*/
     transform: rotate(0deg);
+    transition: .7s;
 }
 
 .acordion-elem__content {
@@ -87,6 +90,7 @@ label {
 .acordion-elem__check:checked ~ .acordion-elem__content { /* при клике на радио инпут*/
     height: 100%;
     padding-bottom: 20px;
+    transition: .7s;
 }
 
 .acordion-elem__content-center {
@@ -142,6 +146,7 @@ label {
 
     .acordion:hover .acordion-elem__title{ /* при наведении */
         color: #000;
+        transition: .7s;
     }
 
     .acordion-elem__title img {
@@ -150,15 +155,18 @@ label {
 
     .acordion-elem__title:hover img { /* при наведении */
         transform: rotate(0deg);
+        transition: .7s;
     }
 
     .acordion-elem:hover .acordion-elem__title img { /* при наведении */
         transform: rotate(0deg);
+        transition: .7s;
     }
 
     .acordion-elem__title:hover + .acordion-elem__content { /* при наведении */
         height: 100%;
         padding-bottom: 20px;
+        transition: .7s;
     }
 
     .acordion-elem__content:hover {
