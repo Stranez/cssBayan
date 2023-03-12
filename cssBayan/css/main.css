@@ -25,6 +25,10 @@ img {
     max-width: 100%;
 }
 
+label {
+    display: block;
+}
+
 .wrapper {
     width: 100%;
     height: 100%;
@@ -62,8 +66,27 @@ img {
     margin-top: -25px;
 }
 
+.acordion-elem__check:checked + .acordion-elem__title { /* при клике на радио инпут*/
+    color: #000;
+}
+
 .acordion-elem__title img { /* крестик закрытия\плюсик открытия */
     width: 15px;
+    transform: rotate(45deg);
+}
+
+.acordion-elem__check:checked + .acordion-elem__title img { /* при клике на радио инпут*/
+    transform: rotate(0deg);
+}
+
+.acordion-elem__content {
+    height: 0;
+    overflow: hidden;
+}
+
+.acordion-elem__check:checked ~ .acordion-elem__content { /* при клике на радио инпут*/
+    height: 100%;
+    padding-bottom: 20px;
 }
 
 .acordion-elem__content-center {
@@ -103,6 +126,10 @@ img {
         font-size: 22px;
     }
 
+    label {
+        cursor: pointer;
+    }
+
     .container {
         max-width: 1280px;
         padding-top: 6px;
@@ -113,8 +140,30 @@ img {
         padding: 7px;
     }
 
+    .acordion:hover .acordion-elem__title{ /* при наведении */
+        color: #000;
+    }
+
     .acordion-elem__title img {
         width: 30px;
+    }
+
+    .acordion-elem__title:hover img { /* при наведении */
+        transform: rotate(0deg);
+    }
+
+    .acordion-elem:hover .acordion-elem__title img { /* при наведении */
+        transform: rotate(0deg);
+    }
+
+    .acordion-elem__title:hover + .acordion-elem__content { /* при наведении */
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .acordion-elem__content:hover {
+        height: 100%;
+        padding-bottom: 20px;
     }
 
     .acordion-elem__content-center img {
